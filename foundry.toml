@@ -1,0 +1,7 @@
+[default]
+remappings = ['forge-std/=lib/forge-std/src/','solmate/=lib/solmate/src/']
+
+[ci]
+fuzz-runs = 10_000
+
+# See more config options https://github.com/gakonst/foundry/tree/master/config
