@@ -1,6 +1,6 @@
-# Project name
+# Solidity template
 
-Project description
+Foundry template for Solidity projects.
 
 # Credits
 
