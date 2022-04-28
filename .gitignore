@@ -66,6 +66,7 @@ xcuserdata/
 # Solidity
 /out/
 /cache/
+flattened.sol
 
 # ============================================================================ #
 # Application
