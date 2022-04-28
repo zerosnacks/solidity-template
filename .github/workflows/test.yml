@@ -21,12 +21,12 @@ jobs:
 
     steps:
       - name: Checkout
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
         with:
           submodules: recursive
 
       - name: Install Node.js ${{ matrix.node_version }}
-      - uses: actions/setup-node@v2
+        uses: actions/setup-node@v2
 
       - name: Install Foundry
         uses: onbjerg/foundry-toolchain@v1
