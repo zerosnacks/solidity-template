@@ -11,11 +11,11 @@ update:; forge update
 npm:; npm install
 
 # Forge tasks
-build:; forge clean && forge build --optimize
-test:; forge clean && forge test --optimize -v # --fork-url $(ETH_RPC_URL)
-trace:; forge clean && forge test --optimize -vvv # --fork-url $(ETH_RPC_URL)
-debug:; forge clean && forge test -vvvvv # --fork-url $(ETH_RPC_URL)
-snapshot:; forge clean && forge snapshot --optimize
+clean:; forge clean
+build:; forge build
+test:; forge test # --fork-url $(ETH_RPC_URL)
+trace:; forge test -vvvvv # --fork-url $(ETH_RPC_URL)
+snapshot:; forge snapshot
 
 # Lint tasks
 lint:; npm run lint

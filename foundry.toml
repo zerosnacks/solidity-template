@@ -1,5 +1,8 @@
 [default]
-remappings = ['forge-std/=lib/forge-std/src/','solmate/=lib/solmate/src/']
+optimizer = true
+optimizer_runs = 10000
+cache = false
+verbosity = 3
 
 [ci]
 fuzz-runs = 10_000
