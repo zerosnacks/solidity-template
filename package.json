@@ -1,16 +1,25 @@
 {
   "name": "solidity-template",
   "version": "0.1.0",
-  "license": "AGPL-3.0-only",
+  "license": "MIT",
   "private": true,
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "scripts": {
-    "lint": "prettier --check src/**/*.sol && solhint --config .solhint.json src/**/*.sol",
-    "lint:fix": "prettier --write src/**/*.sol && solhint --config .solhint.json src/**/*.sol --fix"
+    "lint": "prettier --check 'src/**/*.sol' && solhint --config .solhint.json 'src/**/*.sol'",
+    "lint:fix": "prettier --write 'src/**/*.sol' && solhint --config .solhint.json 'src/**/*.sol' --fix",
+    "prepare": "husky install"
   },
   "devDependencies": {
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.1",
     "prettier": "^2.6.2",
     "prettier-plugin-solidity": "^1.0.0-beta.19",
     "solhint": "^3.3.7",
     "solhint-plugin-prettier": "^0.0.5"
+  },
+  "lint-staged": {
+    "*.sol": "prettier --write 'src/**/*.sol'"
   }
 }
