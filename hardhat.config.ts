@@ -13,16 +13,14 @@ import { TASK_COMPILE_SOLIDITY_GET_SOURCE_PATHS } from "hardhat/builtin-tasks/ta
 import { validateEnvConfig } from "./scripts/utilities/validateEnvConfig";
 
 // Validate values from .env file
-const { PRIVATE_KEY, ETH_RPC_URL, CMC_API_KEY, ETHERSCAN_API_KEY } =
-  validateEnvConfig(
-    ".env",
-    Joi.object({
-      PRIVATE_KEY: Joi.string().default("1".repeat(64)),
-      ETH_RPC_URL: Joi.string().default(""),
-      CMC_API_KEY: Joi.string(),
-      ETHERSCAN_API_KEY: Joi.string(),
-    })
-  );
+const { PRIVATE_KEY, ETH_RPC_URL, ETHERSCAN_API_KEY } = validateEnvConfig(
+  ".env",
+  Joi.object({
+    PRIVATE_KEY: Joi.string().default("1".repeat(64)),
+    ETH_RPC_URL: Joi.string(),
+    ETHERSCAN_API_KEY: Joi.string(),
+  })
+);
 
 // Filter out .t.sol test files and regular Solidity files in the test directory
 subtask(TASK_COMPILE_SOLIDITY_GET_SOURCE_PATHS).setAction(
