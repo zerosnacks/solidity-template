@@ -9,7 +9,7 @@
   "scripts": {
     "lint:check": "prettier --check 'src/**/*.sol'",
     "lint:fix": "prettier --write 'src/**/*.sol'",
-    "solhint:check": "solhint --config .solhint.json 'src/**/*.sol",
+    "solhint:check": "solhint --config .solhint.json 'src/**/*.sol'",
     "solhint:fix": "solhint --config .solhint.json 'src/**/*.sol' --fix",
     "prepare": "husky install"
   },
