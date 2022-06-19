@@ -35,11 +35,15 @@ subtask(TASK_COMPILE_SOLIDITY_GET_SOURCE_PATHS).setAction(
   }
 );
 
+// Solidity
+const SOLC_VERSION = "0.8.15";
+
 // Accounts
 const accounts = [PRIVATE_KEY];
 
 // Network settings
 const settings = {
+  viaIR: true,
   optimizer: {
     enabled: true,
     runs: 200,
@@ -76,7 +80,7 @@ const config: HardhatUserConfig & {
   solidity: {
     compilers: [
       {
-        version: "0.8.10",
+        version: SOLC_VERSION,
         settings,
       },
     ],
