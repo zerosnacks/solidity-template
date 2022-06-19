@@ -17,6 +17,10 @@ test:; forge test # --fork-url $(ETH_RPC_URL) --etherscan-api-key $(ETHERSCAN_AP
 trace:; forge test -vvvvv # --fork-url $(ETH_RPC_URL) --etherscan-api-key $(ETHERSCAN_API_KEY)
 snapshot:; forge snapshot
 
+# Hardhat tasks
+hh-clean:; npm run hh:clean
+hh-build:; npm run hh:build
+
 # Lint tasks
 lint:; npm run lint:check && npm run solhint:check
 lint-fix:; npm run lint:fix && npm run solhint:fix

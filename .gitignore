@@ -61,12 +61,14 @@ xcuserdata/
 # ============================================================================ #
 
 # Node.js
+/dist/
 /node_modules/
 
 # Solidity
 /out/
 /cache/
-flattened.sol
+/artifacts/
+/hh-cache/
 
 # ============================================================================ #
 # Application
