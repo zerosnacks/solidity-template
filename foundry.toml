@@ -8,4 +8,3 @@ fuzz_runs = 100
 
 [ci]
 fuzz-runs = 10_000
-# See more config options https://github.com/gakonst/foundry/tree/master/config

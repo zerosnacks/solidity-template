@@ -20,6 +20,7 @@ snapshot:; forge snapshot
 # Hardhat tasks
 hh-clean:; npm run hh:clean
 hh-build:; npm run hh:build
+hh-test:; npm run hh:test
 
 # Lint tasks
 lint:; npm run lint:check && npm run solhint:check

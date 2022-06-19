@@ -7,8 +7,9 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "hh:build": "hardhat compile",
     "hh:clean": "hardhat clean",
+    "hh:build": "hardhat compile",
+    "hh:test": "hardhat test",
     "lint:check": "prettier --check 'src/**/*.sol'",
     "lint:fix": "prettier --write 'src/**/*.sol'",
     "solhint:check": "solhint --config .solhint.json 'src/**/*.sol'",
