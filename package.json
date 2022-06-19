@@ -41,6 +41,9 @@
     "typescript": "^4.7.4"
   },
   "lint-staged": {
-    "*.sol": "prettier --write 'src/**/*.sol'"
+    "*.sol": "prettier --write",
+    "*.json": "prettier --write",
+    "*.ts": "prettier --write",
+    "*.js": "prettier --write"
   }
 }
