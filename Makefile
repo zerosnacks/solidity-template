@@ -18,5 +18,5 @@ trace:; forge test -vvvvv # --fork-url $(ETH_RPC_URL) --etherscan-api-key $(ETHE
 snapshot:; forge snapshot
 
 # Lint tasks
-lint:; npm run lint
-lint-fix:; npm run lint:fix
+lint:; npm run lint:check && npm run solhint:check
+lint-fix:; npm run lint:fix && npm run solhint:fix
