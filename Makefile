@@ -2,26 +2,23 @@
 # (-include to ignore error if it does not exist)
 -include .env
 
-install: update npm
+install: forge-install npm-install
 
 # Forge dependencies
-update:; forge update
+forge-install:; forge install
+forge-update:; forge update
 
 # Node dependencies for linting
-npm:; npm install
+npm-install:; npm install
 
 # Forge tasks
 clean:; forge clean
 build:; forge build
 test:; forge test # --fork-url $(ETH_RPC_URL) --etherscan-api-key $(ETHERSCAN_API_KEY)
-trace:; forge test -vvvvv # --fork-url $(ETH_RPC_URL) --etherscan-api-key $(ETHERSCAN_API_KEY)
+trace:; forge test # -vvvvv --fork-url $(ETH_RPC_URL) --etherscan-api-key $(ETHERSCAN_API_KEY)
 snapshot:; forge snapshot
+coverage:; forge coverage --report lcov
 
-# Hardhat tasks
-hh-clean:; npm run hh:clean
-hh-build:; npm run hh:build
-hh-test:; npm run hh:test
-
-# Lint tasks
-lint:; npm run lint:check && npm run solhint:check
-lint-fix:; npm run lint:fix && npm run solhint:fix
+# Node tasks
+lint-check:; npm run lint:check
+lint-fix:; npm run lint:fix
